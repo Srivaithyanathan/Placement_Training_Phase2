@@ -18,11 +18,10 @@ class Password{
 }
 public class Password_validator {
 
-	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		String str=sc.next();
+	public static void main(String[] args) {	
 		Password pass=new Password();
-		try {
+		try(Scanner sc=new Scanner(System.in);){
+			String str=sc.next();
 			pass.passcheck(str);
 		}
 		catch(InvalidPasswordException e){
